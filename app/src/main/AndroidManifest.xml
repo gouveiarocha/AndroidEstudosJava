@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gouveiarocha.appsaulas">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ActsEstudos.Componentes.Componentes4"
+            android:label="@string/title_activity_componentes4"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ActsEstudos.Views.Slides"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ActsEstudos.Firebase.FirebaseTeste" />
+        <activity android:name=".ActsEstudos.Navegacao.MenusToolbar" />
+        <activity android:name=".ActsAplicativos.Secundarias.TarefasAdicionar" />
+        <activity
+            android:name=".ActsAplicativos.AppTarefas"
+            android:label="@string/title_activity_app_tarefas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActsEstudos.ManipulacaoDados.BancoSQLite" />
+        <activity
+            android:name=".ActsAplicativos.AppMinhasAnotacoes"
+            android:label="@string/title_activity_app_minhas_anotacoes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActsEstudos.ManipulacaoDados.EstudoSharedPreferences" />
+        <activity android:name=".ActsAplicativos.AppAprendaIngles" />
+        <activity android:name=".ActsEstudos.Navegacao.Abas" />
+        <activity
+            android:name=".ActsAplicativos.AppAtmConsultoria"
+            android:label="@string/title_activity_app_atm_consultoria"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActsEstudos.Navegacao.NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer_novo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActsEstudos.Navegacao.Fragments" />
+        <activity android:name=".ActsAplicativos.Secundarias.CaraCoroaRes" />
+        <activity android:name=".ActsAplicativos.AppCaraCoroa" />
+        <activity android:name=".ActsEstudos.EnviaRecebeDados.RecebeDados" />
+        <activity android:name=".ActsEstudos.EnviaRecebeDados.EnviaDados" />
+        <activity android:name=".ActsEstudos.Outros.CicloActivity" />
+        <activity android:name=".ActsEstudos.Views.MeuCardView" />
+        <activity android:name=".ActsEstudos.Views.MeuRecyclerView" />
+        <activity android:name=".ActsEstudos.Views.MeuListView" />
+        <activity android:name=".ActsAplicativos.AppGorjeta" />
+        <activity android:name=".ActsEstudos.Componentes.Componentes2" />
+        <activity android:name=".ActsEstudos.Componentes.Componentes1" />
+        <activity android:name=".ActsEstudos.Layouts.GridLayout" />
+        <activity android:name=".ActsEstudos.Layouts.FrameLayout" />
+        <activity android:name=".ActsEstudos.Layouts.LinearLayout" />
+        <activity android:name=".ActsEstudos.Layouts.Alinhamento" />
+        <activity android:name=".ActsEstudos.Outros.EventoClique" />
+        <activity android:name=".ActsEstudos.Layouts.InterfaceNetflix" />
+        <activity android:name=".ActsAplicativos.AppSorteio" />
+        <activity
+            android:name=".ActsPrincipais.MainActivity"
+            android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActsPrincipais.EstudosActivity" />
+        <activity android:name=".ActsPrincipais.AppsActivity" />
+        <activity android:name=".ActsAplicativos.AppFrasesDia" />
+        <activity android:name=".ActsAplicativos.AppJokenpo" />
+        <activity
+            android:name=".ActsEstudos.Componentes.Componentes3"
+            android:label="@string/title_activity_float_action_button"
+            android:parentActivityName=".ActsPrincipais.EstudosActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gouveiarocha.appsaulas.ActsPrincipais.EstudosActivity" />
+        </activity>
+        <activity android:name=".ActsAplicativos.AppCombustivel" />
+        <activity
+            android:name=".ActsPrincipais.HomeActivity"
+            android:label="@string/title_activity_home_activiy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActsEstudos.Media.MediaPlayerEstudo" />
+        <activity android:name=".ActsEstudos.Media.VideoPlayerEstudo" />
+        <activity
+            android:name=".ActsEstudos.Media.VideoPlayerEstudo2"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

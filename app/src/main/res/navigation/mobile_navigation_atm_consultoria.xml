@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_atm_principal">
+
+    <fragment
+        android:id="@+id/nav_atm_principal"
+        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.principal.AtmPrincipalFragment"
+        android:label="Principal"
+        tools:layout="@layout/fragment_atm_principal" />
+
+    <fragment
+        android:id="@+id/nav_atm_servicos"
+        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.servicos.AtmServicosFragment"
+        android:label="Serviços"
+        tools:layout="@layout/fragment_atm_servicos" />
+
+    <fragment
+        android:id="@+id/nav_atm_clientes"
+        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.clientes.AtmClientesFragment"
+        android:label="Clientes"
+        tools:layout="@layout/fragment_atm_clientes" />
+
+    <fragment
+        android:id="@+id/nav_atm_contato"
+        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.contato.AtmContatoFragment"
+        android:label="Contato"
+        tools:layout="@layout/fragment_atm_contato" />
+
+    <fragment
+        android:id="@+id/nav_atm_sobre"
+        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.sobre.AtmSobreFragment"
+        android:label="Sobre"
+        tools:layout="@layout/fragment_atm_sobre" />
+</navigation>
