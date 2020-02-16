@@ -1,0 +1,1 @@
+Esse projeto integra diversos exercicios do curso ANDROID OREO 2020.
