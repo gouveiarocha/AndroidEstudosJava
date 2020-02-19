@@ -175,6 +175,8 @@ public class EstudosActivity extends AppCompatActivity {
         item = new Item("COMPONENTES 4", "Seção 16 [FloatActionButton/Menu]");
         this.listaItens.add(item);
 
+        item = new Item("CALENDARIO", "Seção 16");
+        this.listaItens.add(item);
     }
 
     public void mudarActivity(String valor) {
@@ -253,6 +255,9 @@ public class EstudosActivity extends AppCompatActivity {
                 startActivity(new Intent(EstudosActivity.this, Slides.class));
                 break;
             case "COMPONENTES 4":
+                startActivity(new Intent(EstudosActivity.this, Componentes4.class));
+                break;
+            case "CALENDARIO":
                 startActivity(new Intent(EstudosActivity.this, Componentes4.class));
                 break;
         }

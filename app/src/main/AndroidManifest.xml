@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ActsEstudos.Outros.Calendario"></activity>
         <activity
             android:name=".ActsEstudos.Componentes.Componentes4"
             android:label="@string/title_activity_componentes4"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ActsEstudos.Views.Slides"
             android:theme="@style/AppTheme" />
