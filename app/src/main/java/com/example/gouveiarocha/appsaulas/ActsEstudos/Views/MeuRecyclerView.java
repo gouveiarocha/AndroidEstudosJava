@@ -2,7 +2,9 @@ package com.example.gouveiarocha.appsaulas.ActsEstudos.Views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,6 +29,8 @@ public class MeuRecyclerView extends AppCompatActivity {
     private RecyclerView recyclerViewFilmes;
     private List<Filme> listaFilmes = new ArrayList<>();
 
+    private FilmesAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +42,7 @@ public class MeuRecyclerView extends AppCompatActivity {
         this.criarFilmes();
 
         //Criar o adapter
-        FilmesAdapter adapter = new FilmesAdapter(listaFilmes);
+        adapter = new FilmesAdapter(listaFilmes);
 
         //Criar e configurar o RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());            //cria o layout
@@ -127,8 +131,10 @@ public class MeuRecyclerView extends AppCompatActivity {
 
                 if (direction == ItemTouchHelper.END) {
                     Toast.makeText(MeuRecyclerView.this, "Arrastou para o fim...", Toast.LENGTH_SHORT).show();
+                    recyclerViewFilmes.setAdapter(adapter);
                 } else if (direction == ItemTouchHelper.START) {
                     Toast.makeText(MeuRecyclerView.this, "Arrastou para o inicio...", Toast.LENGTH_SHORT).show();
+                    recyclerViewFilmes.setAdapter(adapter);
                 }
 
             }
