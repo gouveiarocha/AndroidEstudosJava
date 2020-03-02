@@ -127,7 +127,7 @@ public class EstudosActivity extends AppCompatActivity {
         item = new Item("LISTVIEW", "Seção 10");
         this.listaItens.add(item);
 
-        item = new Item("RECYCLERVIEW", "Seção 10");
+        item = new Item("RECYCLERVIEW", "Seção 10 - Com SWIPE(Seção 16)");
         this.listaItens.add(item);
 
         item = new Item("CARDVIEW", "Seção 10");

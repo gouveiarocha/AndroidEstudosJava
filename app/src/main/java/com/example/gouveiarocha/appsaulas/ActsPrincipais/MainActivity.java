@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //INICIA A HOMEPAGE
-        startActivity(new Intent(MainActivity.this, Calendario.class));
+        startActivity(new Intent(MainActivity.this, HomeActivity.class));
 
     }
 

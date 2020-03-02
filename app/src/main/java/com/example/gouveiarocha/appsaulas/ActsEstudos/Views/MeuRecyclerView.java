@@ -1,10 +1,14 @@
 package com.example.gouveiarocha.appsaulas.ActsEstudos.Views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -45,6 +49,9 @@ public class MeuRecyclerView extends AppCompatActivity {
 
         //Evento de clique
         eventoClique();
+
+        //Swipe
+        iniciarSwipe();
 
     }
 
@@ -95,6 +102,39 @@ public class MeuRecyclerView extends AppCompatActivity {
 
         filme = new Filme("June", "Mitologia", "2010");
         this.listaFilmes.add(filme);
+
+    }
+
+    //Movimentos de deslizar...
+    public void iniciarSwipe() {
+        ItemTouchHelper.Callback itemTouch = new ItemTouchHelper.Callback() {
+            @Override
+            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+
+                int dragsFlags = ItemTouchHelper.ACTION_STATE_IDLE;             //define que não pode arrastar para cima ou baixo
+                int swipeFlags = ItemTouchHelper.END | ItemTouchHelper.START;   //define os movimentos de iniciarSwipe (start para o inicio e end para o fim)
+                return makeMovementFlags(dragsFlags, swipeFlags);
+
+            }
+
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+                if (direction == ItemTouchHelper.END) {
+                    Toast.makeText(MeuRecyclerView.this, "Arrastou para o fim...", Toast.LENGTH_SHORT).show();
+                } else if (direction == ItemTouchHelper.START) {
+                    Toast.makeText(MeuRecyclerView.this, "Arrastou para o inicio...", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        };
+
+        new ItemTouchHelper(itemTouch).attachToRecyclerView(recyclerViewFilmes);
 
     }
 

@@ -111,6 +111,25 @@ public class FirebaseTeste extends AppCompatActivity {
         });
     }
 
+    //Recuperando dados em um nó com ids e armazenando em uma lista. Extraido do APP OrganizzeClone, Principal.class.CarregarListaMovimentacoes()
+    public void somenteExemploCarregandoTodosOsDadosFilhosDeUmNoEArmazenandoEmLista(){
+        //.addValueEventListener(new ValueEventListener() {
+        //    @Override
+        //    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+        //        //Toast.makeText(PrincipalActivity.this, "" + dataSnapshot.getChildren(), Toast.LENGTH_SHORT).show();
+
+        //        listaMovimentacaos.clear();
+
+        //        for (DataSnapshot dados: dataSnapshot.getChildren()){   //armazena cada nó filhoe os values de dataSnapsho(MesAno) em dados.
+
+        //            Movimentacao movimentacao = dados.getValue(Movimentacao.class);
+        //            Toast.makeText(PrincipalActivity.this, "" + movimentacao.getTipo(), Toast.LENGTH_SHORT).show();
+
+        //        }
+        //    }
+    }
+
     public void authCadastro() {
         auth.createUserWithEmailAndPassword("gouveiatab@gmail.com", "dg@123456789")
                 .addOnCompleteListener(FirebaseTeste.this, new OnCompleteListener<AuthResult>() {
