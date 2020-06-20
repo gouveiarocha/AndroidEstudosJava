@@ -20,6 +20,7 @@ import com.example.gouveiarocha.appsaulas.ActsEstudos.ManipulacaoDados.BancoSQLi
 import com.example.gouveiarocha.appsaulas.ActsEstudos.ManipulacaoDados.EstudoSharedPreferences;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Navegacao.Abas;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Navegacao.MenusToolbar;
+import com.example.gouveiarocha.appsaulas.ActsEstudos.Outros.Calendario;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Outros.CicloActivity;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Navegacao.NavigationDrawer;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Componentes.Componentes1;
@@ -32,6 +33,7 @@ import com.example.gouveiarocha.appsaulas.ActsEstudos.Outros.EventoClique;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Layouts.GridLayout;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Layouts.InterfaceNetflix;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Media.MediaPlayerEstudo;
+import com.example.gouveiarocha.appsaulas.ActsEstudos.Threads.Threads;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Views.Slides;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Views.MeuCardView;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Views.MeuListView;
@@ -177,6 +179,9 @@ public class EstudosActivity extends AppCompatActivity {
 
         item = new Item("CALENDARIO", "Seção 16");
         this.listaItens.add(item);
+
+        item = new Item("THREADS", "Seção 20");
+        this.listaItens.add(item);
     }
 
     public void mudarActivity(String valor) {
@@ -258,7 +263,10 @@ public class EstudosActivity extends AppCompatActivity {
                 startActivity(new Intent(EstudosActivity.this, Componentes4.class));
                 break;
             case "CALENDARIO":
-                startActivity(new Intent(EstudosActivity.this, Componentes4.class));
+                startActivity(new Intent(EstudosActivity.this, Calendario.class));
+                break;
+            case "THREADS":
+                startActivity(new Intent(EstudosActivity.this, Threads.class));
                 break;
         }
 

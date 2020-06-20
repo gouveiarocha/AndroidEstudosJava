@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActsEstudos.Outros.Calendario"></activity>
+        <activity android:name=".ActsEstudos.Requisicoes.RequisicoesRetrofit"></activity>
+        <activity android:name=".ActsEstudos.Requisicoes.RequisicoesNativo" />
+        <activity android:name=".ActsEstudos.Threads.Threads" />
+        <activity android:name=".ActsEstudos.Outros.Calendario" />
         <activity
             android:name=".ActsEstudos.Componentes.Componentes4"
             android:label="@string/title_activity_componentes4"
