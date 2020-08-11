@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Componentes.Componentes4;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Firebase.FirebaseTeste;
+import com.example.gouveiarocha.appsaulas.ActsEstudos.Exclusivos.Localizacao.ExcLocalizacaoActivity;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.ManipulacaoDados.BancoSQLite;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.ManipulacaoDados.EstudoSharedPreferences;
 import com.example.gouveiarocha.appsaulas.ActsEstudos.Navegacao.Abas;
@@ -182,6 +183,12 @@ public class EstudosActivity extends AppCompatActivity {
 
         item = new Item("THREADS", "Seção 20");
         this.listaItens.add(item);
+
+        item = new Item("EXCLUSIVO - LOCALIZAÇÃO", "TIAGO AGUIAR");
+        this.listaItens.add(item);
+
+        item = new Item("MAPS", "Seção 23");
+        this.listaItens.add(item);
     }
 
     public void mudarActivity(String valor) {
@@ -267,6 +274,12 @@ public class EstudosActivity extends AppCompatActivity {
                 break;
             case "THREADS":
                 startActivity(new Intent(EstudosActivity.this, Threads.class));
+                break;
+            case "EXCLUSIVO - LOCALIZAÇÃO":
+                startActivity(new Intent(EstudosActivity.this, ExcLocalizacaoActivity.class));
+                break;
+            case "MAPS":
+                //startActivity(new Intent(EstudosActivity.this, MapsActivity.class));
                 break;
         }
 
