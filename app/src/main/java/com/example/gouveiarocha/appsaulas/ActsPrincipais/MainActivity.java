@@ -4,7 +4,6 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.gouveiarocha.appsaulas.ActsEstudos.Exclusivos.Localizacao.ExcLocalizacaoActivity;
 import com.example.gouveiarocha.appsaulas.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //INICIA A HOMEPAGE
-        startActivity(new Intent(MainActivity.this, ExcLocalizacaoActivity.class));
+        startActivity(new Intent(MainActivity.this, HomeActivity.class));
         //startActivity(new Intent(MainActivity.this, Threads.class));
 
     }

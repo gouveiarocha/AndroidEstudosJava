@@ -2,13 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.gouveiarocha.appsaulas">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ActsEstudos.Exclusivos.Localizacao.ExcLocalizacaoActivity"></activity>
+        <activity android:name=".ActsEstudos.Exclusivos.Fragments.ExcFragments"></activity>
+        <activity android:name=".ActsEstudos.Exclusivos.Localizacao.ExcLocalizacaoActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -123,8 +122,7 @@
             android:name=".ActsEstudos.Media.VideoPlayerEstudo2"
             android:screenOrientation="landscape" />
 
-        <service android:name=".Classes.ExcLocalizacao.FetchAddressService"/>
-
+        <service android:name=".Classes.ExcLocalizacao.FetchAddressService" />
     </application>
 
 </manifest>

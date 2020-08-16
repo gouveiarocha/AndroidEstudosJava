@@ -34,7 +34,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 /**
  * Aula exclusiva Tiago Aguiar
- * Link Aulas: https://www.youtube.com/watch?v=-5qrgm13DeI
+ * Link: https://www.youtube.com/watch?v=-5qrgm13DeI
  */
 
 public class ExcLocalizacaoActivity extends AppCompatActivity {
