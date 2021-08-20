@@ -45,4 +45,8 @@ public class MainActivity extends AppCompatActivity {
      * CTRK+D: Duplica a linha atual
      */
 
+    /** CLASSES E CODIGOS UTEIS
+     * CLASSE UUID = Essa classe gera ids unicos baseados na data\hora\minuto\segundo. Para gerar um id, bast utilizar o código: UUID.randomUUID().toString()
+     */
+
 }
