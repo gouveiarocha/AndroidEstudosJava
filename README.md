@@ -1,1 +1,1 @@
-Esse projeto integra diversos exercicios do curso ANDROID OREO 2020.
+Projeto que integra aulas do(s) curso(s): [ANDROID OREO 2020], servindo como biblioteca de consultas. Com customizações e melhorias pessoais.
