@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.gouveiarocha.appsaulas.ActsEstudos.Navegacao.Abas">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Navegacao.Abas.AbasActivity">
 
     <com.ogaclejapan.smarttablayout.SmartTabLayout
         android:id="@+id/view_pager_tab"

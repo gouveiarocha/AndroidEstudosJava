@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.gouveiarocha.appsaulas">
+    package="com.example.gouveiarocha.estudosjava">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -19,8 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ActsEstudos.Exclusivos.Fragments.ExcFragments"></activity>
-        <activity android:name=".ActsEstudos.Exclusivos.Localizacao.ExcLocalizacaoActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Paralelos.Estudos.Fragments.ExcFragments"></activity>
+        <activity android:name="com.example.gouveiarocha.estudosjava.Paralelos.Estudos.Localizacao.ExcLocalizacaoActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,64 +34,64 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ActsEstudos.Maps.MapsActivity"
+            android:name="com.example.gouveiarocha.estudosjava.Paralelos.Estudos.Outros.MapsActivity"
             android:launchMode="singleTop"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ActsEstudos.Requisicoes.RequisicoesRetrofit" />
-        <activity android:name=".ActsEstudos.Requisicoes.RequisicoesNativo" />
-        <activity android:name=".ActsEstudos.Threads.Threads" />
-        <activity android:name=".ActsEstudos.Outros.Calendario" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.API.RequisicoesRetrofit" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.API.RequisicoesNativo" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Threads.Threads" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Outros.Calendario" />
         <activity
-            android:name=".ActsEstudos.Componentes.Componentes4"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Componentes.Componentes4"
             android:label="@string/title_activity_componentes4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ActsEstudos.Views.Slides"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Views.Slides"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ActsEstudos.Firebase.FirebaseTeste" />
-        <activity android:name=".ActsEstudos.Navegacao.MenusToolbar" />
-        <activity android:name=".ActsAplicativos.Secundarias.TarefasAdicionar" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Firebase.FirebaseTeste" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.MenusToolbar" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.Tarefas.activity.TarefasAddActivity" />
         <activity
-            android:name=".ActsAplicativos.AppTarefas"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.Tarefas.activity.AppTarefasActivity"
             android:label="@string/title_activity_app_tarefas"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActsEstudos.ManipulacaoDados.BancoSQLite" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.ManipulacaoDados.BancoSQLite" />
         <activity
-            android:name=".ActsAplicativos.AppMinhasAnotacoes"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppMinhasAnotacoes"
             android:label="@string/title_activity_app_minhas_anotacoes"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActsEstudos.ManipulacaoDados.EstudoSharedPreferences" />
-        <activity android:name=".ActsAplicativos.AppAprendaIngles" />
-        <activity android:name=".ActsEstudos.Navegacao.Abas" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.ManipulacaoDados.EstudoSharedPreferences" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AprendaIngles.AppAprendaIngles" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.Abas.AbasActivity" />
         <activity
-            android:name=".ActsAplicativos.AppAtmConsultoria"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.ATMConsultoria.AppAtmConsultoria"
             android:label="@string/title_activity_app_atm_consultoria"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ActsEstudos.Navegacao.NavigationDrawer"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.NavigationDrawer"
             android:label="@string/title_activity_navigation_drawer_novo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActsEstudos.Navegacao.Fragments" />
-        <activity android:name=".ActsAplicativos.Secundarias.CaraCoroaRes" />
-        <activity android:name=".ActsAplicativos.AppCaraCoroa" />
-        <activity android:name=".ActsEstudos.EnviaRecebeDados.RecebeDados" />
-        <activity android:name=".ActsEstudos.EnviaRecebeDados.EnviaDados" />
-        <activity android:name=".ActsEstudos.Outros.CicloActivity" />
-        <activity android:name=".ActsEstudos.Views.MeuCardView" />
-        <activity android:name=".ActsEstudos.Views.MeuRecyclerView" />
-        <activity android:name=".ActsEstudos.Views.MeuListView" />
-        <activity android:name=".ActsAplicativos.AppGorjeta" />
-        <activity android:name=".ActsEstudos.Componentes.Componentes2" />
-        <activity android:name=".ActsEstudos.Componentes.Componentes1" />
-        <activity android:name=".ActsEstudos.Layouts.GridLayout" />
-        <activity android:name=".ActsEstudos.Layouts.FrameLayout" />
-        <activity android:name=".ActsEstudos.Layouts.LinearLayout" />
-        <activity android:name=".ActsEstudos.Layouts.Alinhamento" />
-        <activity android:name=".ActsEstudos.Outros.EventoClique" />
-        <activity android:name=".ActsEstudos.Layouts.InterfaceNetflix" />
-        <activity android:name=".ActsAplicativos.AppSorteio" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.Fragments.FragmentsActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.CaraCoroa.CaraCoroaRes" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.CaraCoroa.AppCaraCoroa" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.EnviaRecebeDados.RecebeDados" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.EnviaRecebeDados.EnviaDados" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Outros.CicloActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Views.CardView.CardViewActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Views.RecyclerView.RecyclerViewActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Views.MeuListView" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppGorjeta" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Componentes.Componentes2" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Componentes.Componentes1" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Layouts.GridLayout" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Layouts.FrameLayout" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Layouts.LinearLayout" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Layouts.Alinhamento" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Outros.EventoClique" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Layouts.InterfaceNetflix" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppSorteio" />
         <activity
-            android:name=".ActsPrincipais.MainActivity"
+            android:name="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.MainActivity"
             android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,33 +99,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActsPrincipais.EstudosActivity" />
-        <activity android:name=".ActsPrincipais.AppsActivity" />
-        <activity android:name=".ActsAplicativos.AppFrasesDia" />
-        <activity android:name=".ActsAplicativos.AppJokenpo" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.EstudosActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.AppsActivity" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppFrasesDia" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppJokenpo" />
         <activity
-            android:name=".ActsEstudos.Componentes.Componentes3"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Componentes.Componentes3"
             android:label="@string/title_activity_float_action_button"
-            android:parentActivityName=".ActsPrincipais.EstudosActivity"
+            android:parentActivityName="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.EstudosActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gouveiarocha.appsaulas.ActsPrincipais.EstudosActivity" />
+                android:value="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.EstudosActivity" />
         </activity>
-        <activity android:name=".ActsAplicativos.AppCombustivel" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AppCombustivel" />
         <activity
-            android:name=".ActsPrincipais.HomeActivity"
+            android:name="com.example.gouveiarocha.estudosjava.ActivitysPrincipais.HomeActivity"
             android:label="@string/title_activity_home_activiy"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActsEstudos.Media.MediaPlayerEstudo" />
-        <activity android:name=".ActsEstudos.Media.VideoPlayerEstudo" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Media.MediaPlayerEstudo" />
+        <activity android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Media.VideoPlayerEstudo" />
         <activity
-            android:name=".ActsEstudos.Media.VideoPlayerEstudo2"
+            android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Media.VideoPlayerEstudo2"
             android:screenOrientation="landscape" />
 
-        <service android:name=".Classes.ExcLocalizacao.FetchAddressService" />
+        <service android:name="com.example.gouveiarocha.estudosjava.Paralelos.Estudos.Localizacao.FetchAddressService" />
 
-        <receiver android:name=".ActsEstudos.Outros.ExampleAppWidgetProvider">
+        <receiver android:name="com.example.gouveiarocha.estudosjava.Paralelos.Estudos.Outros.ExampleAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>

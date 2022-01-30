@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Layouts.Alinhamento">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Layouts.Alinhamento">
 
     <Button
         android:id="@+id/button5"

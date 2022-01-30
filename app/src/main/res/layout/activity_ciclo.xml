@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Outros.CicloActivity">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Outros.CicloActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

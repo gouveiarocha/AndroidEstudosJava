@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="40dp"
-    tools:context=".ActsEstudos.Layouts.LinearLayout">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Layouts.LinearLayout">
 
     <EditText
         android:id="@+id/editText2"

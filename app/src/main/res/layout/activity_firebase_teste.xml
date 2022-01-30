@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gouveiarocha.appsaulas.ActsEstudos.Firebase.FirebaseTeste">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Firebase.FirebaseTeste">
 
     <TextView
         android:id="@+id/txt_dbref_recuperado"

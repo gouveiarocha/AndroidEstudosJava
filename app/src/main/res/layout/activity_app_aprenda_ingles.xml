@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.gouveiarocha.appsaulas.ActsAplicativos.AppAprendaIngles">
+    tools:context="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AprendaIngles.AppAprendaIngles">
 
     <com.ogaclejapan.smarttablayout.SmartTabLayout
         android:id="@+id/view_pager_tab"

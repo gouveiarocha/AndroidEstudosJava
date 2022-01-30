@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/myColor2"
-    tools:context=".ActsAplicativos.AppFrasesDia"
+    tools:context=".Curso_AndroidOreo2022.Apps.AppFrasesDia"
     tools:layout_editor_absoluteY="81dp">
 
     <ImageView

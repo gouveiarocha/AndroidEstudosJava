@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Media.VideoPlayerEstudo2">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Media.VideoPlayerEstudo2">
 
     <VideoView
         android:id="@+id/vp_video"

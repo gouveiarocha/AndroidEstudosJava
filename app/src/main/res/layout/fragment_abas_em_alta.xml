@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gouveiarocha.appsaulas.Fragments.EstudoAbas.AbasEmAltaFragment">
+    tools:context="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.Abas.EmAltaFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

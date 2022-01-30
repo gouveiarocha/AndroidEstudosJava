@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ai_segundo_fundo"
-    tools:context="com.example.gouveiarocha.appsaulas.Fragments.AprendaIngles.InglesNumerosFragment">
+    tools:context="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AprendaIngles.fragments.InglesNumerosFragment">
 
     <ImageView
         android:id="@+id/ai_img_um"

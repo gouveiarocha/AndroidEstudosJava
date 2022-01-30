@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ActsEstudos.Componentes.Componentes4"
+    tools:context=".Curso_AndroidOreo2022.Estudos.Componentes.Componentes4"
     tools:showIn="@layout/activity_componentes4">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

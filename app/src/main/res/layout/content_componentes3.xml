@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ActsEstudos.Componentes.Componentes3"
+    tools:context=".Curso_AndroidOreo2022.Estudos.Componentes.Componentes3"
     tools:showIn="@layout/activity_componentes3">
 
     <Button

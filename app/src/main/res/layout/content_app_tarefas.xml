@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.gouveiarocha.appsaulas.ActsAplicativos.AppTarefas"
+    tools:context="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.Tarefas.activity.AppTarefasActivity"
     tools:showIn="@layout/activity_app_tarefas">
 
     <androidx.recyclerview.widget.RecyclerView

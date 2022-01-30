@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsAplicativos.AppAtmConsultoria">
+    tools:context=".Curso_AndroidOreo2022.Apps.ATMConsultoria.AppAtmConsultoria">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

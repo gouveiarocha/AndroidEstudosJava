@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Outros.Calendario">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Outros.Calendario">
 
     <!--<CalendarView
         android:id="@+id/calendar_view_nativo"

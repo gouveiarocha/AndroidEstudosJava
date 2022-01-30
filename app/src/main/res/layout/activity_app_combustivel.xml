@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/myColor2"
     android:orientation="vertical"
-    tools:context=".ActsAplicativos.AppCombustivel"
+    tools:context=".Curso_AndroidOreo2022.Apps.AppCombustivel"
     tools:layout_editor_absoluteY="81dp">
 
     <ImageView

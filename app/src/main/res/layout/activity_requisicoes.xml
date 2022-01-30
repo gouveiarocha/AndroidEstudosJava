@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Requisicoes.RequisicoesNativo">
+    tools:context=".Curso_AndroidOreo2022.Estudos.API.RequisicoesNativo">
 
     <EditText
         android:id="@+id/etxt_req_cep"

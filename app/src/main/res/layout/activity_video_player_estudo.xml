@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/vp_fundo"
-    tools:context=".ActsEstudos.Media.VideoPlayerEstudo">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Media.VideoPlayerEstudo">
 
     <ImageView
         android:id="@+id/imageView"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActsEstudos.Views.MeuListView">
+    tools:context=".Curso_AndroidOreo2022.Estudos.Views.MeuListView">
 
     <ListView
         android:id="@+id/list_view_locais"

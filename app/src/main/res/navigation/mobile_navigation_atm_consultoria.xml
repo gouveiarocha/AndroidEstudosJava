@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/nav_atm_principal"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.principal.AtmPrincipalFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.ATMConsultoria.fragments.AtmPrincipalFragment"
         android:label="Principal"
         tools:layout="@layout/fragment_atm_principal" />
 
     <fragment
         android:id="@+id/nav_atm_servicos"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.servicos.AtmServicosFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.ATMConsultoria.fragments.AtmServicosFragment"
         android:label="Serviços"
         tools:layout="@layout/fragment_atm_servicos" />
 
     <fragment
         android:id="@+id/nav_atm_clientes"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.clientes.AtmClientesFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.ATMConsultoria.fragments.AtmClientesFragment"
         android:label="Clientes"
         tools:layout="@layout/fragment_atm_clientes" />
 
     <fragment
         android:id="@+id/nav_atm_contato"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.contato.AtmContatoFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Fragments.ATMConsultoria.ui.contato.AtmContatoFragment"
         android:label="Contato"
         tools:layout="@layout/fragment_atm_contato" />
 
     <fragment
         android:id="@+id/nav_atm_sobre"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.ATMConsultoria.ui.sobre.AtmSobreFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.ATMConsultoria.fragments.AtmSobreFragment"
         android:label="Sobre"
         tools:layout="@layout/fragment_atm_sobre" />
 </navigation>

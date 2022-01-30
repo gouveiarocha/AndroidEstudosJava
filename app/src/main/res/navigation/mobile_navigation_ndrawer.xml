@@ -7,43 +7,43 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.home.HomeFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_ndrawer_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.gallery.GalleryFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_ndrawer_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.slideshow.SlideshowFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_ndrawer_slideshow" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.tools.ToolsFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.tools.ToolsFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_ndrawer_tools" />
 
     <fragment
         android:id="@+id/nav_contato"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.contato.ContactsFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.contato.ContactsFragment"
         android:label="Contato"
         tools:layout="@layout/fragment_ndrawer_contatos" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.share.ShareFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_ndrawer_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.gouveiarocha.appsaulas.Fragments.EstudoNavigationDrawer.ui.send.SendFragment"
+        android:name="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Estudos.Navegacao.NavigationDrawer.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_ndrawer_send" />
 </navigation>

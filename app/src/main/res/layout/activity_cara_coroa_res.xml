@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#61BC8B"
-    tools:context=".ActsAplicativos.Secundarias.CaraCoroaRes">
+    tools:context=".Curso_AndroidOreo2022.Apps.CaraCoroa.CaraCoroaRes">
 
     <ImageView
         android:id="@+id/caracoroa_img_res"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFBC4"
-    tools:context="com.example.gouveiarocha.appsaulas.Fragments.AprendaIngles.InglesBichosFragment">
+    tools:context="com.example.gouveiarocha.estudosjava.Curso_AndroidOreo2022.Apps.AprendaIngles.fragments.InglesBichosFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
