@@ -1,1 +1,7 @@
-Projeto que integra aulas do(s) curso(s): [ANDROID OREO 2020], servindo como biblioteca de consultas. Com customizações e melhorias pessoais.
+Projeto que integra:
+[CURSO ANDROID OREO 2022 - UDEMY]
+[AULAS E VIDEO-AULAS AVULAS]
+[DESENVOLVIMENTO E TESTES PESSOAIS]
+
+*Serve como biblioteca de consultas. 
+*Com customizações e melhorias pessoais.
