@@ -1,2 +1,3 @@
 rootProject.name = "AndroidEstudosJava"
 include ':app'
+include ':Curso_MaratonaJava'

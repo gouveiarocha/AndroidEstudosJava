@@ -1,0 +1,7 @@
+Vamos aprender sobre arquivos, leitura e escrita.
+As principais classes:
+    File - Mais basica para criar arquivos.
+    FileReader - Ler arquivos\conteudo.
+    BufferedReader - Otimização da classe FileReader - Otimização para grandes arquivos.
+    FileWriter - Escrita arquivos
+    BufferedWriter - Otimização da classe FileWriter - Otimização para grandes arquivos.
