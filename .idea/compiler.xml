@@ -2,7 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
-      <module name="AndroidEstudosJava.app" target="11" />
+      <module name="AndroidEstudosJava.Alura_TDD" target="11" />
+      <module name="AndroidEstudosJava.Alura_TestesAutomatizados" target="11" />
+      <module name="AndroidEstudosJava.alura_testesautomatizadosandroid" target="11" />
+      <module name="AndroidEstudosJava.app2" target="11" />
+      <module name="AndroidEstudosJava.Udemy_AndroidOreo2022" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

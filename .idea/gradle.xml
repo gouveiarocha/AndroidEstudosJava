@@ -10,8 +10,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Curso_MaratonaJava" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/Alura_TestesAutomatizados" />
+            <option value="$PROJECT_DIR$/Udemy_AndroidOreo2022" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
