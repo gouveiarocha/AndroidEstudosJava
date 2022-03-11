@@ -6,9 +6,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
-
 import br.com.alura.leilao.R;
+import br.com.alura.leilao.model.Lance;
 import br.com.alura.leilao.model.Leilao;
 
 public class LancesLeilaoActivity extends AppCompatActivity {
@@ -16,11 +15,13 @@ public class LancesLeilaoActivity extends AppCompatActivity {
     private TextView descricao;
     private TextView maiorLance;
     private TextView menorLance;
+    private TextView maioresLances;
 
     private void setViews() {
         descricao = findViewById(R.id.lances_leilao_descricao);
         maiorLance = findViewById(R.id.lances_leilao_maior_lance);
         menorLance = findViewById(R.id.lances_leilao_menor_lance);
+        maioresLances = findViewById(R.id.lances_leilao_maiores_lances);
     }
 
     @Override
@@ -31,11 +32,19 @@ public class LancesLeilaoActivity extends AppCompatActivity {
         setViews();
 
         Intent dadosRecebidos = getIntent();
-        if(dadosRecebidos.hasExtra("leilao")){
+        if (dadosRecebidos.hasExtra("leilao")) {
             Leilao leilao = (Leilao) dadosRecebidos.getSerializableExtra("leilao");
             descricao.setText(leilao.getDescricao());
             maiorLance.setText(String.valueOf(leilao.getMaiorLance()));
             menorLance.setText(String.valueOf(leilao.getMenorLance()));
+
+            StringBuilder sb = new StringBuilder();
+            for (Lance lance : leilao.getTresMaioresLances()) {
+                sb.append(lance.getValor() + "\n");
+            }
+            String maioresLancesEmTexto = sb.toString();
+            maioresLances.setText(maioresLancesEmTexto);
+
         }
 
     }
