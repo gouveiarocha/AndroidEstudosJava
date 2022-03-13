@@ -48,14 +48,6 @@ public class LeilaoTest {
         assertEquals(200.0, LEILAO.getMaiorLance(), DELTA);
     }
 
-    //ex3
-    @Test
-    public void retornarMaiorLance_QuandoRecebeValorEmOrdemDecrescente() {
-        LEILAO.propoe(new Lance(USUARIO1, 200.0));
-        LEILAO.propoe(new Lance(USUARIO2, 100.0));
-        assertEquals(200.0, LEILAO.getMaiorLance(), DELTA);
-    }
-
     @Test
     public void retornarMenorLance_QuandoRecebeApenasUmLance() {
         LEILAO.propoe(new Lance(USUARIO1, 100.0));
@@ -66,13 +58,6 @@ public class LeilaoTest {
     public void retornarMenorLance_QuandoRecebeValorEmOrdemCrescente() {
         LEILAO.propoe(new Lance(USUARIO1, 100));
         LEILAO.propoe(new Lance(USUARIO2, 200.0));
-        assertEquals(100, LEILAO.getMenorLance(), DELTA);
-    }
-
-    @Test
-    public void retornarMenorLance_QuandoRecebeValorEmOrdemDecrescente() {
-        LEILAO.propoe(new Lance(USUARIO1, 200.0));
-        LEILAO.propoe(new Lance(USUARIO2, 100.0));
         assertEquals(100, LEILAO.getMenorLance(), DELTA);
     }
 
@@ -119,6 +104,26 @@ public class LeilaoTest {
         List<Lance> retornoTresMaioresLances = LEILAO.getTresMaioresLances();
         assertEquals(3, retornoTresMaioresLances.size());
         assertEquals(400.0, retornoTresMaioresLances.get(0).getValor(), DELTA);
+    }
+
+    @Test
+    public void retornarValorZeroParaMaiorLance_QuandoNaoHouverLances(){
+        double retornoMaiorLance = LEILAO.getMaiorLance();
+        assertEquals(0.0, retornoMaiorLance, DELTA);
+    }
+
+    @Test
+    public void retornarValorZeroParaMenorLance_QuandoNaoHouverLances(){
+        double retornoMenorLance = LEILAO.getMenorLance();
+        assertEquals(0.0, retornoMenorLance, DELTA);
+    }
+
+    @Test
+    public void naoDeve_AdicionarLance_QuandoForMenorQueOMaiorLance(){
+        LEILAO.propoe(new Lance(USUARIO1, 100));
+        LEILAO.propoe(new Lance(USUARIO2, 50));
+        int retornoQuantidadeLances = LEILAO.getQuantidadeLances();
+        assertEquals(1, retornoQuantidadeLances);
     }
 
 }
