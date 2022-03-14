@@ -41,19 +41,19 @@ public class ListaLeilaoActivity extends AppCompatActivity {
         console.propoe(new Lance(new Usuario("Douglas"), 200.0));
         console.propoe(new Lance(new Usuario("Fábio"), 550.0));
         console.propoe(new Lance(new Usuario("Carol"), 1050.0));
-        console.propoe(new Lance(new Usuario("Júlio"), 150.0));
+        console.propoe(new Lance(new Usuario("Júlio"), 150000.0));
 
         Leilao carro = new Leilao("Carro");
         carro.propoe(new Lance(new Usuario("Douglas"), 5200.0));
         carro.propoe(new Lance(new Usuario("Fábio"), 6350.0));
         carro.propoe(new Lance(new Usuario("Davi"), 26320.0));
-        carro.propoe(new Lance(new Usuario("Heitor"), 18350.0));
+        carro.propoe(new Lance(new Usuario("Heitor"), 18350000.0));
 
         Leilao casa = new Leilao("Casa");
         casa.propoe(new Lance(new Usuario("Douglas"), 50200.0));
         casa.propoe(new Lance(new Usuario("Júlio"), 355350.0));
-        casa.propoe(new Lance(new Usuario("Oliverio"), 25350.0));
-        casa.propoe(new Lance(new Usuario("Leila"), 65350.0));
+        casa.propoe(new Lance(new Usuario("Oliverio"), 253500000.0));
+        casa.propoe(new Lance(new Usuario("Leila"), 6535000000000.0));
 
         return new ArrayList<>(Arrays.asList(
                 console, carro, casa

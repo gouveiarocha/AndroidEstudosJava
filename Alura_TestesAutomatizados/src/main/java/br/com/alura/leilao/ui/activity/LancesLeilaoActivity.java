@@ -6,9 +6,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.Normalizer;
+
 import br.com.alura.leilao.R;
 import br.com.alura.leilao.model.Lance;
 import br.com.alura.leilao.model.Leilao;
+import br.com.alura.leilao.utils.FormatadorDeMoeda;
 
 public class LancesLeilaoActivity extends AppCompatActivity {
 
@@ -34,9 +37,10 @@ public class LancesLeilaoActivity extends AppCompatActivity {
         Intent dadosRecebidos = getIntent();
         if (dadosRecebidos.hasExtra("leilao")) {
             Leilao leilao = (Leilao) dadosRecebidos.getSerializableExtra("leilao");
+            FormatadorDeMoeda formatadorDeMoeda = new FormatadorDeMoeda();
             descricao.setText(leilao.getDescricao());
-            maiorLance.setText(String.valueOf(leilao.getMaiorLance()));
-            menorLance.setText(String.valueOf(leilao.getMenorLance()));
+            maiorLance.setText(formatadorDeMoeda.formata(leilao.getMaiorLance()));
+            menorLance.setText(formatadorDeMoeda.formata(leilao.getMenorLance()));
 
             StringBuilder sb = new StringBuilder();
             for (Lance lance : leilao.getTresMaioresLances()) {

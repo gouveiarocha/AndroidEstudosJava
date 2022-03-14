@@ -16,17 +16,42 @@ public class Lance implements Serializable, Comparable {
         return valor;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
     // método que configura a ordenção da lista de lances. ver aula -> 05.03 'Cuidados com a cobertura de teste'.
     @Override
     public int compareTo(Object o) {
         Lance lance = (Lance) o;
-        if (valor > lance.getValor()){
+        if (valor > lance.getValor()) {
             return -1;
         }
-        if (valor < lance.getValor()){
+        if (valor < lance.getValor()) {
             return 1;
         }
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Lance lance = (Lance) o;
+
+        if (Double.compare(lance.valor, valor) != 0) return false;
+        return usuario.equals(lance.usuario);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = usuario.hashCode();
+        temp = Double.doubleToLongBits(valor);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 
 }
