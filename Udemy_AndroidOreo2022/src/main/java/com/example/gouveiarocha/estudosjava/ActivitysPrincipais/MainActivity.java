@@ -41,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
     /** COMANDOS IDE:
      * CTRL+SHIFT+SETA CIMA OU BAIXO: Joga a linha atual para cima ou para baixo.
-     * CTRL+ALT+L: Formata o código, seja o java ou o xml.
      * CTRK+D: Duplica a linha atual
+     * CTRL+ALT+L - Formata o código, seja o java ou o xml.
+     * CTRL+ALT+M - Extrai trecho de codigo para um metodo
+     * CTRL+ALT+O - Limpa os imports nao utilizados
      */
 
     /** CLASSES E CODIGOS UTEIS
