@@ -4,7 +4,6 @@ import android.content.Intent;
 
 import androidx.test.rule.ActivityTestRule;
 
-import org.hamcrest.core.AllOf;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,7 +22,9 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.core.AllOf.*;
+import static br.com.alura.leilao.matchers.ViewMatcherPersonalizado.apareceLeilaoNaPosicao;
+import static br.com.alura.leilao.matchers.ViewMatcherPersonalizado.apareceLeilaoNaPosicaoRefatorado;
+import static org.hamcrest.core.AllOf.allOf;
 
 public class ListaLeilaoTelaTest {
 
@@ -47,6 +48,9 @@ public class ListaLeilaoTelaTest {
 
     @Test
     public void deve_AparecerUmLeilao_QuandoCarregarUmLeilaoNaAPI() throws IOException {
+
+        // Essa implementação foi abordada no curso, mas não é recomendada... a melhor implementação está no método:
+        // 'deve_AparecerDoisLeiloes_QuandoCarregarDoisLeiloesDaAPIRefatorado'
 
         tentaSalvarLeilaoNaAPI(new Leilao("Carro"));
 
@@ -75,27 +79,50 @@ public class ListaLeilaoTelaTest {
 
         activity.launchActivity(new Intent());
 
-        onView(allOf(
-                withText("Carro"),
-                withId(R.id.item_leilao_descricao)))
-                .check(matches(isDisplayed()));
+//        onView(allOf(
+//                withText("Carro"),
+//                withId(R.id.item_leilao_descricao)))
+//                .check(matches(isDisplayed()));
+//
+//        String formatoEsperadoParaCarro = formatadorDeMoeda.formata(0.00);
+//        onView(allOf(
+//                withText(formatoEsperadoParaCarro),
+//                withId(R.id.lances_leilao_maior_lance)))
+//                .check(matches(isDisplayed()));
+//
+//        onView(allOf(
+//                withText("Computador"),
+//                withId(R.id.item_leilao_descricao)))
+//                .check(matches(isDisplayed()));
+//
+//        String formatoEsperadoParaComputador = formatadorDeMoeda.formata(0.00);
+//        onView(allOf(
+//                withText(formatoEsperadoParaComputador),
+//                withId(R.id.lances_leilao_maior_lance)))
+//                .check(matches(isDisplayed()));
 
-        String formatoEsperadoParaCarro = formatadorDeMoeda.formata(0.00);
-        onView(allOf(
-                withText(formatoEsperadoParaCarro),
-                withId(R.id.lances_leilao_maior_lance)))
-                .check(matches(isDisplayed()));
+        onView(withId(R.id.lista_leilao_recyclerview))
+                .check(matches(apareceLeilaoNaPosicao(
+                        0,
+                        "Carro",
+                        0.00)));
 
-        onView(allOf(
-                withText("Computador"),
-                withId(R.id.item_leilao_descricao)))
-                .check(matches(isDisplayed()));
+    }
 
-        String formatoEsperadoParaComputador = formatadorDeMoeda.formata(0.00);
-        onView(allOf(
-                withText(formatoEsperadoParaComputador),
-                withId(R.id.lances_leilao_maior_lance)))
-                .check(matches(isDisplayed()));
+    @Test
+    public void deve_AparecerDoisLeiloes_QuandoCarregarDoisLeiloesDaAPIRefatorado() throws IOException {
+
+        tentaSalvarLeilaoNaAPI(new Leilao("Carro"), new Leilao("Computador"));
+
+        activity.launchActivity(new Intent());
+
+        onView(withId(R.id.lista_leilao_recyclerview))
+                .check(matches(apareceLeilaoNaPosicaoRefatorado(0,
+                        "Carro", 0.00)));
+
+        onView(withId(R.id.lista_leilao_recyclerview))
+                .check(matches(apareceLeilaoNaPosicaoRefatorado(1,
+                        "Computador", 0.00)));
 
     }
 
