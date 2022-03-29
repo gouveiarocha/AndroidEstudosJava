@@ -2,3 +2,4 @@ rootProject.name = "AndroidEstudosJava"
 include ':Udemy_AndroidOreo2022'
 include ':Alura_TestesAutomatizados1'
 include ':Alura_TestesAutomatizados2'
+include ':EstudosParalelos'

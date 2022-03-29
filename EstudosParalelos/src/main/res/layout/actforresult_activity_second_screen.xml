@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Paralelos.Estudos.ActForResult.SecondScreen">
+    tools:context=".ActForResult.SecondScreen">
 
     <TextView
         android:id="@+id/edt_second_screen"
@@ -28,4 +28,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_second_screen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

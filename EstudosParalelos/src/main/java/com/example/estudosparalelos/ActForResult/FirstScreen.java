@@ -1,4 +1,6 @@
-package com.example.gouveiarocha.estudosjava.Paralelos.Estudos.ActForResult;
+package com.example.estudosparalelos.ActForResult;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.gouveiarocha.estudosjava.R;
+import com.example.estudosparalelos.R;
 
 import java.io.Serializable;
 
@@ -19,14 +19,14 @@ public class FirstScreen extends AppCompatActivity {
     private Button btnSend;
     private TextView textResult;
 
-    private Car car = new Car("Corsa", 220);
+    private FirstScreen.Car car = new FirstScreen.Car("Corsa", 220);
 
     private final int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_screen);
+        setContentView(R.layout.actforresult_activity_first_screen);
 
         edtValue = findViewById(R.id.edt_value);
         btnSend = findViewById(R.id.btn_send);
@@ -57,7 +57,7 @@ public class FirstScreen extends AppCompatActivity {
         }
     }
 
-    static class Car implements Serializable{
+    static class Car implements Serializable {
 
         private String name;
         private int maxSpeed;

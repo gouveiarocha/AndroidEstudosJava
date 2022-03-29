@@ -1,4 +1,6 @@
-package com.example.gouveiarocha.estudosjava.Paralelos.Estudos.ActForResult;
+package com.example.estudosparalelos.ActForResult;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,14 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.gouveiarocha.estudosjava.R;
-
+import com.example.estudosparalelos.R;
 
 public class SecondScreen extends AppCompatActivity {
 
-    private TextView edtSecondScreen;
+        private TextView edtSecondScreen;
     private Button btnBack;
 
     private FirstScreen.Car car;
@@ -21,12 +20,12 @@ public class SecondScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_screen);
+        setContentView(R.layout.actforresult_activity_second_screen);
 
         edtSecondScreen = findViewById(R.id.edt_second_screen);
         btnBack = findViewById(R.id.btn_back);
 
-        if (getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
             car = (FirstScreen.Car) getIntent().getSerializableExtra("car");
         }
 
