@@ -2,18 +2,18 @@ package br.com.alura.leilao.ui.activity;
 
 import android.content.Intent;
 
+import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.io.IOException;
 
+import br.com.alura.leilao.BaseTesteIntegracao;
 import br.com.alura.leilao.R;
-import br.com.alura.leilao.api.retrofit.client.TesteWebClient;
 import br.com.alura.leilao.formatter.FormatadorDeMoeda;
 import br.com.alura.leilao.model.Leilao;
 
@@ -26,12 +26,8 @@ import static br.com.alura.leilao.matchers.ViewMatcherPersonalizado.apareceLeila
 import static br.com.alura.leilao.matchers.ViewMatcherPersonalizado.apareceLeilaoNaPosicaoRefatorado;
 import static org.hamcrest.core.AllOf.allOf;
 
-public class ListaLeilaoTelaTest {
+public class ListaLeilaoTelaTest extends BaseTesteIntegracao {
 
-    private static final String ERRO_LIMPEZA_DADOS_API = "Banco de dados não foi limpo...";
-    private static final String ERRO_LEILÃO_NÃO_FOI_SALVO = "Leilão não foi salvo... ";
-
-    private final TesteWebClient webClient = new TesteWebClient();
     private final FormatadorDeMoeda formatadorDeMoeda = new FormatadorDeMoeda();
 
     // instancia da act que será testada
@@ -126,27 +122,28 @@ public class ListaLeilaoTelaTest {
 
     }
 
+    @Test
+    public void deve_AparecerUltimoLeilao_QuandoCarregarDezLeiloesDaAPI() throws IOException {
+
+        tentaSalvarLeilaoNaAPI(
+                new Leilao("Carro"), new Leilao("Computador"),
+                new Leilao("TV"), new Leilao("Notebook"),
+                new Leilao("Console"), new Leilao("Jogo"),
+                new Leilao("Estante"), new Leilao("Quadro"),
+                new Leilao("Smartphone"), new Leilao("Casa"));
+
+        activity.launchActivity(new Intent());
+
+        onView(withId(R.id.lista_leilao_recyclerview))
+                .perform(RecyclerViewActions.scrollToPosition(9))
+                .check(matches(apareceLeilaoNaPosicaoRefatorado(9,
+                        "Casa", 0.00)));
+
+    }
+
     @After
     public void tearDown() throws IOException {
         limpaBaseDeDadosDaAPI();
-    }
-
-    // MÉTODOS ->>>
-
-    private void limpaBaseDeDadosDaAPI() throws IOException {
-        boolean bancoDeDadosNaoFoiLimpo = !webClient.limpaBancoDeDados();
-        if (bancoDeDadosNaoFoiLimpo) {
-            Assert.fail(ERRO_LIMPEZA_DADOS_API);
-        }
-    }
-
-    private void tentaSalvarLeilaoNaAPI(Leilao... leiloes) throws IOException {
-        for (Leilao leilao : leiloes) {
-            Leilao leilaoSalvo = webClient.salva(leilao);
-            if (leilaoSalvo == null) {
-                Assert.fail(ERRO_LEILÃO_NÃO_FOI_SALVO + leilao.getDescricao());
-            }
-        }
     }
 
 }

@@ -37,7 +37,9 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:srcCompat="@drawable/img_jokenpo_pedra" />
+            app:srcCompat="@drawable/img_jokenpo_pedra"
+            android:contentDescription="PEDRA"
+            />
 
         <ImageView
             android:id="@+id/jokenpo_img_papel"

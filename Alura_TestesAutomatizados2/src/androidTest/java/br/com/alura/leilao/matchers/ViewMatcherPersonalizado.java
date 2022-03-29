@@ -16,7 +16,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
 public class ViewMatcherPersonalizado {
 
-    // matcher personalizado
+    // matcher personalizado (não possui conteúdo do curso espresso pt 2...)
     public static Matcher<? super View> apareceLeilaoNaPosicao(final int posicao, final String descricaoEsperada, final double maiorLanceEsperado) {
         return new BoundedMatcher<View, RecyclerView>(RecyclerView.class) {
             @Override
@@ -53,11 +53,11 @@ public class ViewMatcherPersonalizado {
         };
     }
 
-    // matcher personalizado refatorado
+    // matcher personalizado refatorado (com conteúdo do curso espresso pt 2...)
     public static Matcher<? super View> apareceLeilaoNaPosicaoRefatorado(final int posicaoEsperada, final String descricaoEsperada, final double maiorLanceEsperado) {
         return new BoundedMatcher<View, RecyclerView>(RecyclerView.class) {
 
-            private Matcher<View> displayed = isDisplayed();
+            private final Matcher<View> displayed = isDisplayed();
 
             private final String maiorLanceFormatadoEsperado
                     = new FormatadorDeMoeda().formata(maiorLanceEsperado);
@@ -80,24 +80,21 @@ public class ViewMatcherPersonalizado {
                 }
 
                 View viewDoViewHolder = viewHolderDevolvido.itemView;
-                boolean temDescricaoEsperada = verificaDescricaoEsperada(viewDoViewHolder);
-                boolean temMaiorLanceEsperado = verificaMaiorLanceEsperado(viewDoViewHolder);
+                boolean temDescricaoEsperada = apareceDescricaoEsperada(viewDoViewHolder);
+                boolean temMaiorLanceEsperado = apareceMaiorLanceEsperado(viewDoViewHolder);
 
-                displayed = isDisplayed();
                 return temDescricaoEsperada && temMaiorLanceEsperado && displayed.matches(viewDoViewHolder);
 
             }
 
-            private boolean verificaMaiorLanceEsperado(View viewDoViewHolder) {
-                TextView textViewMaiorLance =
-                        viewDoViewHolder.findViewById(R.id.item_leilao_maior_lance);
-                return textViewMaiorLance.getText().toString().equals(maiorLanceFormatadoEsperado);
+            private boolean apareceMaiorLanceEsperado(View viewDoViewHolder) {
+                TextView textViewMaiorLance = viewDoViewHolder.findViewById(R.id.item_leilao_maior_lance);
+                return textViewMaiorLance.getText().toString().equals(maiorLanceFormatadoEsperado) && displayed.matches(textViewMaiorLance);
             }
 
-            private boolean verificaDescricaoEsperada(View viewDoViewHolder) {
-                TextView textViewDescricao =
-                        viewDoViewHolder.findViewById(R.id.item_leilao_descricao);
-                return textViewDescricao.getText().toString().equals(descricaoEsperada);
+            private boolean apareceDescricaoEsperada(View viewDoViewHolder) {
+                TextView textViewDescricao = viewDoViewHolder.findViewById(R.id.item_leilao_descricao);
+                return textViewDescricao.getText().toString().equals(descricaoEsperada) && displayed.matches(textViewDescricao);
             }
 
         };
