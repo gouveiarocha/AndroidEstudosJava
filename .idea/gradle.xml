@@ -4,12 +4,13 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Alura_Android_1_Agenda" />
             <option value="$PROJECT_DIR$/Alura_TestesAutomatizados1" />
             <option value="$PROJECT_DIR$/Alura_TestesAutomatizados2" />
             <option value="$PROJECT_DIR$/EstudosParalelos" />
