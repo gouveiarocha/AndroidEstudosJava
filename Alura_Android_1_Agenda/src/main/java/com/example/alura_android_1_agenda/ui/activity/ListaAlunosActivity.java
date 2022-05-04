@@ -4,11 +4,16 @@ import static com.example.alura_android_1_agenda.ui.activity.ConstantesActivitie
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alura_android_1_agenda.R;
@@ -31,8 +36,11 @@ public class ListaAlunosActivity extends AppCompatActivity {
         configuraFabNovoAluno();
         configuraLista();
 
-        dao.salva(new Aluno("Douglas", "", ""));
-        dao.salva(new Aluno("Davi", "", ""));
+        //for utilizado apenas para inserir mais Alunos afim de testes
+        for (int i = 0; i < 1; i++) {
+            dao.salva(new Aluno("Douglas", "", ""));
+            dao.salva(new Aluno("Davi", "", ""));
+        }
 
     }
 
@@ -53,11 +61,14 @@ public class ListaAlunosActivity extends AppCompatActivity {
     }
 
     private void configuraLista() {
+
         ListView listaDeAlunos = findViewById(R.id.listview_lista_alunos);
+
         configuraAdapter(listaDeAlunos);
         configuraListenerDeCliquePorItem(listaDeAlunos);
+        //configuraListenerDeCliqueLongoPorItem(listaDeAlunos);
 
-        configuraListenerDeCliqueLongoPorItem(listaDeAlunos);
+        registerForContextMenu(listaDeAlunos);
 
     }
 
@@ -65,7 +76,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         listaDeAlunos.setOnItemLongClickListener((adapterView, view, posicao, l) -> {
             Aluno alunoEscolhido = (Aluno) adapterView.getItemAtPosition(posicao);
             removeAluno(alunoEscolhido);
-            return true;
+            return false;
         });
     }
 
@@ -102,6 +113,31 @@ public class ListaAlunosActivity extends AppCompatActivity {
         Intent vaiParaFormularioActivity = new Intent(ListaAlunosActivity.this, FormularioAlunoActivity.class);
         vaiParaFormularioActivity.putExtra(CHAVE_ALUNO, aluno);
         startActivity(vaiParaFormularioActivity);
+    }
+
+
+    /**
+     * Menu de Contexto...
+     */
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        //menu.add("Remover"); //adicionando item de menu de forma programática
+        getMenuInflater().inflate(R.menu.activity_lista_alunos_menu, menu); //inflate do menu estatico
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.act_lista_alunos_menu_remover){
+            AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            Aluno alunoEscolhido = adapter.getItem(menuInfo.position);
+            removeAluno(alunoEscolhido);
+        } else if (itemId == R.id.act_lista_alunos_menu_teste){
+            Toast.makeText(this, "Só um teste!!!", Toast.LENGTH_SHORT).show();
+        }
+        return super.onContextItemSelected(item);
     }
 
 }
