@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -46,13 +45,13 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.form_aluno_email);
     }
 
-    ////implementação substituida pelo menu de contexto.
-    private void configuraBotaoSalvar() {
+    //implementação substituida pelo menu de contexto.
+//    private void configuraBotaoSalvar() {
 //        Button botaoSalvar = findViewById(R.id.form_aluno_botao_salvar);
 //        botaoSalvar.setOnClickListener(view -> {
 //            finalizaFormulario();
 //        });
-    }
+//    }
 
     private void carregaAluno() {
         Intent dados = getIntent();
