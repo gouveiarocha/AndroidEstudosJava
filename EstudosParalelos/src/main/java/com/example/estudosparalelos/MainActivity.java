@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.estudosparalelos.ActForResult.FirstScreen;
+import com.example.estudosparalelos.Threads.Handler.EstudoHandler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(MainActivity.this, FirstScreen.class));
+        startActivity(new Intent(MainActivity.this, EstudoHandler.class));
 
     }
 }

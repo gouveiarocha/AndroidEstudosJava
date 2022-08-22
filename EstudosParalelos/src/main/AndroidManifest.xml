@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidEstudosJava">
-        <activity android:name=".ActForResult.SecondScreen"></activity>
+        <activity
+            android:name=".Threads.Handler.EstudoHandler"
+            android:exported="false" />
+        <activity android:name=".ActForResult.SecondScreen" />
         <activity android:name=".ActForResult.FirstScreen" />
         <activity android:name=".MainActivity">
             <intent-filter>
